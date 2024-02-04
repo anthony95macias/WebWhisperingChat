@@ -2,17 +2,17 @@ import express from 'express';
 import { config } from 'dotenv';
 config();
 import morgan from 'morgan';
-import appRouter from './routes/index.js';
+import appRouter from './routes/index.js'; // Ensure this path is correct
 
 const app = express();
 
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-// remove it in production
+// Morgan logging middleware (remove it in production)
 app.use(morgan('dev'));
 
-app.use("api/v1", appRouter)
-
+// Corrected the route path to include a leading slash
+app.use("/api/v1", appRouter);
 
 export default app;
