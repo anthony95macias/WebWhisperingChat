@@ -7,5 +7,6 @@ const validator_js_1 = require("../utils/validator.js");
 const userRouter = (0, express_1.Router)();
 userRouter.get('/', user_controllers_js_1.getAllUsers);
 userRouter.post("/signup", (0, validator_js_1.validate)(validator_js_1.signupValidator), user_controllers_js_2.userSignup);
+userRouter.post("/login", (0, validator_js_1.validate)(validator_js_1.LoginValidator), user_controllers_js_1.userLogin);
 exports.default = userRouter;
 //# sourceMappingURL=user-routes.js.map
