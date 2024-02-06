@@ -36,3 +36,5 @@ export const signupValidator = [
 ];
 
 export default { validate, signupValidator };
+
+

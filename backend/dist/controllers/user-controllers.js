@@ -25,7 +25,7 @@ const userSignup = async (req, res, next) => {
         const hashedPassword = await (0, bcrypt_1.hash)(password, 10);
         const user = new User_1.default({ name, email, password: hashedPassword });
         await user.save();
-        return res.status(200).json({ message: "ok", id: user._id.toString() });
+        return res.status(201).json({ message: "ok", id: user._id.toString() });
     }
     catch (error) {
         console.error(error);
