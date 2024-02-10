@@ -7,3 +7,7 @@ html, body {
   color: white;
   font-family: "Roboto Slab", serif ; 
 }
+/* 
+.Image-Inverted(
+  filter: inverted()
+) */

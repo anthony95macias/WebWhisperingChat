@@ -1,34 +1,22 @@
-import { Typography } from "@mui/material"
-import { Link } from "react-router-dom"
+import { AppBar, Toolbar } from '@mui/material'
+import Logo from "../component/shared/Logo"
 
-const Logo = () => {
+const Header = () => {
   return (
-    <div style={{
-        display: "flex",
-        marginRight: "auto",
-        alignItems: "center",
-        gap: "8px",
+    <AppBar sx ={{
+        bgcolor: "transparent",
+        position: "static",
+        boxShadow: "none",
+        
     }}>
-        <Link to={"/"}>
-            <img 
-              className="Image-Inverted" 
-              src="/eye_chat_logo.png" 
-              alt="eye_chat_logo" 
-              width={"60px"} 
-              height={"60px"} 
-              />
-        </Link> 
-        <Typography sx={{
-                  display : {lg: "block", md: "block", sm: "none", xs: "none"}, 
-                  mr: "auto", 
-                  fontWeight: "800", 
-                  textShadow: "2px 2px 2px #000",
-                  color: "white", // Add this line to set the text color
-              }}>
-                <span>Web</span>WhisperingChat
-          </Typography>
-    </div>
+        <Toolbar sx={{
+            display: "flex",
+            justifyContent: "space-between",
+        }}>
+            <Logo />
+        </Toolbar>
+    </AppBar>
   )
 }
 
-export default Logo
+export default Header
