@@ -12,21 +12,20 @@ const Logo = () => {
         <Link to={"/"}>
             <img 
               className="Image-Inverted" 
-              src="/eye_chat_logo.png" 
+              src="eye_chat_logo.png" 
               alt="eye_chat_logo" 
-              width={"60px"} 
-              height={"60px"} 
+              width={"30px"} 
+              height={"30px"} 
               />
-        </Link> 
-        <Typography sx={{
-                  display : {lg: "block", md: "block", sm: "none", xs: "none"}, 
+              <Typography sx={{
+                  display : {md: "block", sm: "none", xs: "none"}, 
                   mr: "auto", 
                   fontWeight: "800", 
                   textShadow: "2px 2px 2px #000",
-                  color: "white", // Add this line to set the text color
               }}>
-                <span>Web</span>WhisperingChat
-          </Typography>
+                <span style={{fontSize: "20px"}}>Web</span>WhisperingChat
+              </Typography>
+        </Link> 
     </div>
   )
 }
